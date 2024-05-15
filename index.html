@@ -8,7 +8,7 @@
         .deep-link-button {
             width: 100px;
             height: 100px;
-            background-color: red;
+            background-color: green;
             color: white;
             border: none;
             border-radius: 5px;
@@ -25,11 +25,6 @@
     function deepLink() {
         // Attempt to open the deep link
         window.location.href = 'https://d6d3-104-28-202-226.ngrok-free.app/universal-link';
-
-        // Set a timeout to redirect to a fallback URL if the deep link fails
-        setTimeout(function() {
-            window.location.href = 'https://example.com'; // Fallback URL
-        }, 1000); // Adjust the timeout duration as needed
     }
 </script>
 
