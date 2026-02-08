@@ -19,10 +19,30 @@
 </head>
 <body>
 
-<h2>Cookie Value</h2>
+<h2>Cookie Value version 2</h2>
 <div id="cookieValue" class="cookie-value">Loading...</div>
 
+<script>
+    function getCookie(name) {
+        const cookies = document.cookie.split('; ');
+        for (const cookie of cookies) {
+            const [key, value] = cookie.split('=');
+            if (key === name) {
+                return decodeURIComponent(value);
+            }
+        }
+        return null;
+    }
 
+    const value = getCookie('try');
+    const output = document.getElementById('cookieValue');
+
+    if (value) {
+        output.textContent = `Value of "try": ${value}`;
+    } else {
+        output.textContent = 'Cookie "try" not found';
+    }
+</script>
 
 </body>
 </html>
